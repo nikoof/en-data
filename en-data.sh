@@ -63,7 +63,7 @@ while getopts ":hc:o:y:" OPTION; do
   esac
 done
 
-CSV_HEADER="county,name,school,ri,ra,rf,mi,ma,mf,lmp,lmi,lma,lmf,mev"
+CSV_HEADER="county,name,school,rom_init,rom_contest,rom_final,mate_init,mate_contest,mate_final,limba_materna,lm_init,lm_contest,lm_final,final_grade"
 JQ_FILTER=".[] | [.county, .name, .school, .ri, .ra, .rf, .mi, .ma, .mf, .lmp, .lmi, .lma, .lmf, .mev] | @csv"
 
 printf "%s\n" $CSV_HEADER
