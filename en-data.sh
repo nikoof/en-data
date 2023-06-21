@@ -41,7 +41,7 @@ check_command "jq" && check_command "curl" && check_command "date" || exit 1
 COUNTIES="AB AR AG BC BH BN BT BV BR B BZ CS CL CJ CT CV DB DJ GL GR GJ HR HD IL IS IF MM MH MS NT OT PH SM SJ SB SV TR TM TL VS VL VN"
 YEAR=$(date +%Y)
 
-while getopts ":c:o:y:" OPTION; do
+while getopts ":hc:o:y:" OPTION; do
   case "$OPTION" in
     c)
       COUNTIES=$OPTARG
@@ -51,6 +51,10 @@ while getopts ":c:o:y:" OPTION; do
       ;;
     y)
       YEAR=$OPTARG
+      ;;
+    h)
+      usage
+      exit 0
       ;;
     ?)
       usage
