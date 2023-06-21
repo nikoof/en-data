@@ -14,7 +14,7 @@ data
 ├── 2022.csv
 └── ...
 ```
-Alternatively, it can be downloaded directly from the releases page.
+Alternatively, it can be downloaded directly from the [releases page](https://github.com/Nikoof/en-data/releases/latest).
 
 ## Script
 The shell script used to compile the data is also available in this repo.

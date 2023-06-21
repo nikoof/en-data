@@ -14,7 +14,7 @@ data
 ├── 2022.csv
 └── ...
 ```
-Pot fi, de asemenea, descărcate direct de pe pagina releases.
+Pot fi, de asemenea, descărcate direct de pe [pagina releases](https://github.com/Nikoof/en-data/releases/latest).
 
 ## Script
 Scriptul utilizat pentru a le colecta este disponibil în acest repo.
