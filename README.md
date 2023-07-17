@@ -4,7 +4,7 @@ regarding the results of a national exam. I have created this archive because da
 
 # Usage
 The csv data is located in the `data` directory.
-```
+```shell
 $ git clone https://github.com/Nikoof/en-data && cd en-data
 $ tree data
 data
@@ -18,9 +18,16 @@ Alternatively, it can be downloaded directly from the [releases page](https://gi
 
 ## Script
 The shell script used to compile the data is also available in this repo.
-```
+
+Run it directly
+```shell
 $ chmod u+x en-data.sh
 $ ./en-data -h
+```
+
+Or use nix
+```shell
+$ nix run github:Nikoof/en-data -- -h
 ```
 
 ## Requirements
