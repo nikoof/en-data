@@ -1,5 +1,4 @@
-#!/usr/bin/env bash
-
+# /usr/bin/env bash
 # Copyright (c) 2023 Nicolas Bratoveanu
 
 # Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -22,13 +21,13 @@
 
 check_command() {
   if ! command -v -- "$@" > /dev/null 2>&1; then
-    printf >&2 "%s\n" "$@ not found"
+    printf >&2 "%s\n not found" "$@"
     return 1
   fi
 }
 
 usage() {
-  printf "%s\n" "Usage: $(basename $0) [-c] [-o]"
+  printf "%s\n" "Usage: $(basename "$0") [-c] [-o]"
   printf "%s\n" "-c COUNTY      Specify which county's data to download. If unset will"
   printf "%s\n" "               download all counties by default."
   printf "%s\n" "-y YEAR        Specify from which year to download. If unset will"
@@ -44,13 +43,13 @@ YEAR=$(date +%Y)
 while getopts ":hc:o:y:" OPTION; do
   case "$OPTION" in
     c)
-      COUNTIES=$OPTARG
+      COUNTIES="$OPTARG"
       ;;
     o)
-      exec >$OPTARG
+      exec >"$OPTARG"
       ;;
     y)
-      YEAR=$OPTARG
+      YEAR="$OPTARG"
       ;;
     h)
       usage
